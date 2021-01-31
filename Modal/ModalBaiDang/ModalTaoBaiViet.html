@@ -1,0 +1,54 @@
+<div class="w-full text-center">
+    <p class="text-2xl font-bold p-2.5">Tạo bài viết</p>
+    <span onclick="closePost()" class=" rounded-full bg-aliceblue px-3 py-1 text-2xl font-bold
+             absolute right-4 top-2 cursor-pointer">&times;</span>
+    <hr>
+</div>
+<div class="w-full flex px-0 py-2">
+    <div class="w-2/12">
+        <a href=""><img class="w-14 h-14 rounded-full object-contain" src="img/avatar.jpg" alt=""></a>
+    </div>
+    <div class="w-10/12">
+        <p class="p-1 pt-0">Trà Hưởng</p>
+        <div class="py-0 px-1 relative" style="width: 28%;border-radius: 30px;background-color: #DBDCE1;">
+            <ul class="flex text-xs relative cursor-pointer">
+                <li class="px-0.5 py-1.5"><i class="fas fa-globe-europe"></i></li>
+                <li class="px-0.5 py-1.5"><b>&nbsp;Công Khai&nbsp;&nbsp;</b></li>
+                <li class="px-0.5 py-1.5"><i style="position: absolute;top: 5px;" class="fas fa-sort-down"></i>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="w-full mt-2.5">
+    <textarea id="textarea-post" class="w-full border-none text-xl h-36 px-4 py-2 " name="contentpost" id=""
+        placeholder="Hưởng ơi, Bạn đang nghĩ gì thế?"></textarea>
+</div>
+<div class="w-full">
+    <ul class="w-full flex">
+        <li onclick="clickOpenModal(0)" class=" pr-16">
+            <h3 class="pl-2.5">Thêm vào bài viết</h3>
+        </li>
+        <li class=""><i style="color: #9567EF;font-size: 25px;padding: 2px 4px;" class="fas fa-video"></i>
+            &nbsp;&nbsp;</li>
+        <li class=""><i style="color: #45B560;font-size: 25px;padding: 2px 4px;" class="far fa-image"></i>
+            &nbsp;&nbsp;</li>
+        <li onclick="clickOpenModal(1)" class="eOpenModal"><i
+                style="color: #EAB026;font-size: 25px;padding: 2px 4px;" class="fas fa-smile"></i> &nbsp;&nbsp;
+        </li>
+        <li onclick="clickOpenModal(3)" class="eOpenModal"><i
+                style="color: #1771E6;font-size: 25px;padding: 2px 4px;" class="fas fa-user-tag"></i>
+            &nbsp;&nbsp;</li>
+        <li onclick="clickOpenModal(2)" class="eOpenModal"><i
+                style="color: #E94F3A;padding-right: 9px;font-size: 25px;padding: 2px 4px;"
+                class="fas fa-map-marker-alt"></i></li>
+        <li onclick="clickOpenModal(4)" class="eOpenModal"><i
+                style="color: #28B19E;font-size: 25px;padding: 2px 4px;" class="fas fa-radiation"></i>
+        </li>
+    </ul>
+</div>
+<div class="w-full text-center my-2.5 mx-0">
+    <button class="w-full p-2.5 border-none text-white cursor-pointer" type="submit"
+        style="background-color: #1771E6;border-radius: 20px;"><b>Đăng</b></button>
+</div>

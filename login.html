@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensonet - Login Or Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tailwind_second.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/Login/login.js"></script>
+</head>
+
+<body>
+    <div id="register" class="w-full">
+        <div id="form-register" style="height: 600px;" class="overflow-x-auto wrapper-scrollbar w-11/12 fixed top-50per left-50per transform-translate-50per
+        p-4 opacity-100 bg-white z-50 border-2 border-solid border-gray-300 hidden sm:w-11/12 sm:mt-12 
+        lg:w-4/5 xl:w-1/3 xl:mt-4">
+            <div class="w-full">
+                <span onclick="closeRegister()" class="cursor-pointer text-3xl top-4 right-4">&times;</span>
+                <h1 class="py-2.5 text-3xl font-bold">Đăng Kí</h1>
+            </div>
+            <p class="pb-2.5">Nhanh Chóng Dễ Dàng</p>
+            <hr>
+            <br>
+            <form action="dang-nhap" method="POST">
+                <p class="text-red my-2.5">
+
+                </p>
+                <div class="w-full flex mb-4">
+                    <input type="text" name="firstName" class="w-47per p-2.5 rounded-lg border-1 
+                    border-solid border-gray-300" placeholder="Họ">
+                    <input type="text" name="lastName" class="w-47per ml-2.5 p-2.5 rounded-lg border-1 
+                    border-solid border-gray-300" placeholder="Tên">
+                </div>
+                <div class="w-full mb-4">
+                    <input oninput="checkEmail(event)" type="text" name="emailOrPhone" class="w-96per p-2.5 rounded-lg border-1 
+                    border-solid border-gray-300" id="emailOrPhone" placeholder="Số Di Động Hoặc Email">
+                </div>
+                <div class="w-full mb-4" style="display: none;" id="email-again">
+                    <input type="text" name="email-again" class="w-96per p-2.5 rounded-lg border-1 
+                    border-solid border-gray-300" placeholder="Nhập Lại Email">
+                </div>
+                <div class="w-full mb-4">
+                    <input type="password" name="passWord" class="w-96per p-2.5 rounded-lg border-1 
+                    border-solid border-gray-300" placeholder="Mật Khẩu Mới">
+                </div>
+                <div class="form_4">
+                    <p><b class="text-sm">Ngày Sinh</b></p>
+                    <select class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                    border-solid border-1" onchange="checkYear(this)" name="year" id="year-se">
+                        <option value=""></option>
+                    </select>
+                    <select class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                    border-solid border-1" onchange="checkMonth(this)" name="month" id="month-se">
+                    </select>
+                    <select class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                    border-solid border-1" name="day" id="day-se">
+                        <option value="">Ngày</option>
+                    </select>
+                </div>
+                <div class="w-full mb-2.5 mt-2.5">
+                    <p class="block"><b class="text-sm">Giới Tính</b></p>
+                    <div class="w-full flex mb-2.5">
+                        <div class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                        border-solid border-1">
+                            <Label class="mr-16"><b>Nam</b></Label><input type="radio" name="GioiTinh" id=""
+                                value="Nam">
+                        </div>
+                        <div class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                        border-solid border-1">
+                            <Label class="mr-16"><b>Nữ</b></Label><input type="radio" name="GioiTinh" id="" value="Nữ">
+                        </div>
+                        <div class="mt-2.5 w-30per mr-4 p-2 border-gray-300 
+                        border-solid border-1">
+                            <Label class="mr-16"><b>Khác</b></Label><input type="radio" name="GioiTinh" id=""
+                                value="Khác">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_5">
+                    <p style="font-size: 14px;color: #737373;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                        <a style="color: #385989;" href="">Điều khoản, Chính sách dữ liệu</a> và
+                        <a style="color: #385989;" href="">Chính sách cookie</a> của chúng tôi.
+                        Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+                    </p>
+                </div>
+                <div class="form_5 text-center p-4">
+                    <button type="submit" style="font-size: 18px;width: 50%;background-color: #119F16;padding: 10px;border: none;
+                                border-radius: 10px;color: white;cursor: pointer;
+                                "><b>Đăng Kí</b></button>
+                </div>
+            </form>
+        </div>
+        <div id="get-account-main" class="wrapper-scrollbar w-11/12 fixed top-50per left-50per transform-translate-50per
+        p-4 opacity-100 bg-white z-50 border-2 border-solid border-gray-300 hidden sm:w-4/5 sm:mt-12 
+        lg:w-3/5 xl:w-5/12 xl:mt-4">
+            <div class="w-full mx-auto">
+                <span onclick="closeGetAcc()" class="cursor-pointer text-3xl top-4 right-4">&times;</span>
+                <h3 style="padding: 10px 0px;">Tìm kiếm tài khoản của bạn</h3>
+                <hr>
+                <br>
+            </div>
+            <div class="w-full">
+                <div class="w-70per my-4 mx-auto">
+                    <p>Vui lòng nhập số điện thoại hoặc email để lấy mật khẩu</p>
+                    <input class="w-full p-4 my-4" type="text" name="" id="" placeholder="Email hoặc số điện thoại">
+                </div>
+                <hr>
+                <div class="w-full mt-4 text-right">
+                    <input type="button" onclick="searchAccount()" class="cursor-pointer w-1/4 p-2.5 bg-1877F2 border-none font-bold 
+                    text-white rounded-lg" type="submit" value="Tìm kiếm">
+                    <input type="button" class="cursor-pointer w-1/5 p-2.5 bg-1877F2 border-none font-bold 
+                    text-white rounded-lg" type="submit" value="Hủy">
+                </div>
+            </div>
+        </div>
+        <div id="show-gui-getacc" class="wrapper-scrollbar w-11/12 fixed top-50per left-50per transform-translate-50per
+        p-4 opacity-100 bg-white z-50 border-2 border-solid border-gray-300 hidden sm:w-4/5 sm:mt-12 
+        lg:w-3/5 xl:w-5/12 xl:mt-4">
+            <div class="w-full flex">
+                <div class="w-70per border-2 border-solid border-gray-200">
+                    <p class="m-2.5">
+                        <b>Bạn muốn nhận mã để đặt lại tài khoản bằng cách nào ?</b>
+                    </p>
+                    <div class="w-full flex py-2.5">
+                        <input type="radio" name="getacc" id="" class="m-2.5">
+                        <div class="px-2.5">
+                            <div class="my-1"><i class="fas fa-envelope-open-text"></i>&nbsp;&nbsp;
+                                <b>Gởi mã qua email </b>
+                            </div>
+                            <p class="">+84354114665</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex py-2.5">
+                        <input type="radio" name="getacc" id="" style="margin: 10px 10px;">
+                        <div class="px-2.5">
+                            <div class="my-1"><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;
+                                <b>Gởi mã qua số điện thoại</b>
+                            </div>
+                            <p class="">tratanhuong01@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-30per text-center py-4">
+                    <img class="w-16 h-16 mx-auto" src="img/avatar.jpg" alt=""><br>
+                    <b>Trà Hưởng</b><br>
+                    <span style="font-size: 12px;">Người dùng facebook</span>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="btn-search-acc text-right">
+                <input type="button" class="cursor-pointer w-1/3 float-left bg-1877F2 border-none 
+                font-bold text-white rounded-lg p-2 mx-2" value="Gửi phản hồi">
+                <input type="button" class="cursor-pointer w-1/5 bg-1877F2 border-none 
+                font-bold text-white rounded-lg p-2 mx-2" value="Tiếp tục">
+                <input type="button" class="cursor-pointer w-1/4 bg-1877F2 border-none 
+                font-bold text-white rounded-lg p-2 mx-2" value="Không phải bạn ?">
+            </div>
+        </div>
+        <div id="type-code" class="hidden wrapper-scrollbar w-11/12 fixed top-50per left-50per transform-translate-50per
+        p-4 opacity-100 bg-white z-50 border-2 border-solid border-gray-300 block sm:w-4/5 sm:mt-12 
+        lg:w-3/5 xl:w-5/12 xl:mt-4">
+            <div class="w-full mx-auto">
+                <span onclick="closeGetAcc()" class="cursor-pointer text-3xl top-4 right-4">&times;</span>
+                <p class="font-bold text-xl py-2" style="font-family: system-ui;">Nhập mã bảo mật</p>
+                <hr class="p-2">
+                <div class="w-full">
+                    <p class="color-word">Vui lòng kiểm tra mã này ở trong email của bạn</p>
+                    <form action="" class="w-full py-2">
+                        <div class="w-full flex pt-2">
+                            <div class="w-7/12">
+                                <input type="text" placeholder="Nhập mã" class="font-bold border-2 border-gray-400 p-2">
+                            </div>
+                            <div class="w-5/12 text-center">
+                                <p class="text-center text-xm font-bold">Chúng tôi đã gửi một mã tới email</p>
+                                <p class="text-center text-sm">tratanhuong01@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <p class="pt-4 font-bold cursor-pointer" style="color: red;">Mã bảo mật không chính xác bạn
+                                còn 9 lần nhập!!</p>
+                        </div>
+                        <hr class="bg-gray-100 p-0.5 my-4">
+                        <div class="w-full p-1 pb-0 mt-3 flex">
+
+                            <div class="w-1/2 p-1 text-left">
+                                <a href="" class="text-blue-700">Không phải bạn ? </a>
+                            </div>
+                            <div class="w-1/2 p-1 text-right">
+                                <button class="p-2 text-white font-bold bg-blue-700 rounded-lg 
+                            mr-3" type="submit">Tiếp tục</button>
+                                <span class="cursor-pointer p-3 bg-gray-400 text-black font-bold rounded-lg">Hủy</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="type-pass-new" class="wrapper-scrollbar w-11/12 fixed top-50per left-50per transform-translate-50per
+        p-4 opacity-100 bg-white z-50 border-2 border-solid border-gray-300 block sm:w-4/5 sm:mt-12 
+        lg:w-3/5 xl:w-5/12 xl:mt-2 hidden">
+            <div class="w-full mx-auto">
+                <span onclick="closeGetAcc()" class="cursor-pointer text-3xl top-4 right-4">&times;</span>
+                <div class="w-full text-center flex pb-3">
+                    <img src="img/completed.png" class="w-24 h-24 mx-auto" alt="">
+                    <p class="font-bold pt-2 px-3">Bạn hiện đang lấy lại mật khẩu của mình , đang ở đoạn đổi mật khẩu
+                        mới .
+                        Vui lòng
+                        nhập mật mới để lấy lại tài khoản của mình , mật khẩu phải hơn 6 kí tự . Xin cảm ơn !!
+                    </p>
+                </div>
+                <div class="w-full">
+                    <form action="" class="w-full">
+                        <table class="mx-auto w-3/4">
+                            <tr>
+                                <td>Mật khẩu mới</td>
+                                <td class="flex"><input
+                                        class="input-password font-bold w-full p-2 border-2 border-gray-200 rounded-lg"
+                                        type="password" placeholder="Nhập mật khẩu">&nbsp;&nbsp;&nbsp;<i
+                                        class="far fa-eye eye1 text-xm pt-3 cursor-pointer" onclick="hideOrShow(0)"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mt-2">Nhập lại mật khẩu mới</td>
+                                <td class="mt-2 flex"><input
+                                        class="input-password font-bold w-full p-2 border-2 border-gray-200 rounded-lg"
+                                        type="password" placeholder="Nhập lại mật khẩu">&nbsp;&nbsp;&nbsp;<i
+                                        class="far fa-eye eye1 text-xm pt-3 cursor-pointer" onclick="hideOrShow(1)"></i>
+                                </td>
+                            </tr>
+                            <script>
+                                var count = 0;
+                                function hideOrShow(index) {
+                                    if (count == 0) {
+                                        count++;
+                                        var eye1 = document.getElementsByClassName("eye1")[index];
+                                        eye1.className = "far fa-eye-slash eye1 text-xm pt-3 cursor-pointer";
+                                        document.getElementsByClassName("input-password")[index].type = "text";
+                                    }
+                                    else {
+                                        var eye1 = document.getElementsByClassName("eye1")[index];
+                                        eye1.className = "far fa-eye eye1 text-xm pt-3 cursor-pointer";
+                                        document.getElementsByClassName("input-password")[index].type = "password";
+                                        count = 0;
+                                    }
+                                }
+                            </script>
+                        </table>
+                        <div class="w-full p-3 text-right pt-4">
+                            <button class="p-2 text-white font-bold bg-blue-700 rounded-lg 
+                            mr-3" type="submit">Tiếp tục</button>
+                            <span class="cursor-pointer p-3 bg-gray-400 text-black font-bold rounded-lg">Hủy</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="web" class="w-full bg-gray-100">
+        <div class="w-full mx-auto sm:w-full md:w-full lg:w-full xl:w-3/4 2xl:w-3/4">
+            <div class="w-full flex flex-col py-2 mx-auto sm:flex-col sm:pt-4 lg:flex-row lg:pt-20">
+                <div class="w-full p-8 sm:w-11/12 sm:mx-auto lg:w-7/12 ">
+                    <span class="text-55px font-bold text-1877F2">Ensonet <br></span>
+                    <p class="text-2xl color-word font-bold">Mạng Xã Hội Lớn Nhất Thế Giới</p>
+                    <br>
+                    <br>
+                    <h2>Ensonet giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h2>
+                </div>
+                <div class="w-full bg-white rounded-lg mr-8 sm:w-11/12 sm:mx-auto lg:w-5/12
+                lg:mr-8">
+                    <div class="w-full text-center p-4 bg-white rounded-lg">
+                        <div class="w-full">
+                            <form class="w-full bg-white" action="" method="post">
+                                <input type="text" name="emailOrPhone"
+                                    class="w-96per p-3 m-2.5 rounded-lg border-2 border-solid border-gray-200" id=""
+                                    placeholder="Email Hoặc Số Điện Thoại">
+                                <input type="password" name="passWord"
+                                    class="w-96per p-3 m-2.5 rounded-lg border-2 border-solid border-gray-200" id=""
+                                    placeholder="Mật Khẩu">
+                                <button
+                                    class="mx-auto ml-2 w-93per p-3 my-2.5 border-none rounded-lg bg-1877F2 text-sm text-white font-bold"
+                                    type="submit">Đăng Nhập</button>
+                                <p class="p-4 bg-white cursor-pointer"><a onclick="openGetAcc()"
+                                        class="text-1877F2 bg-white">Quên Tài khoản</a></p>
+                            </form>
+                        </div>
+                        <hr class="w-90%;mx-auto mb-4">
+                        <div class="w-full">
+                            <div class="bg-white mb-4">
+                                <input type="button" onclick="openRegister()" value="Tạo Tài Khoản" class="outline-none mb-8 px-8 py-3 bg-36A420 text-15px
+                             font-bold text-white rounded-lg cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-center pb-6">
+                        <a class="text-black" href=""><b>Tạo Trang</b>&nbsp;dành cho người nổi tiếng, nhãn hiệu hoặc
+                            doanh nghiệp.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:p-4">
+                <ul class="list-none flex flex-wrap">
+                    <li class="text-14px p-2"><a class="text-737373" href="">Tiếng Việt</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">English (UK)</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">中文(台灣)</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">日本語</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">한국어</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">ภาษาไทย</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Français (France)</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Español</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Português (Brasil)</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Deutsch</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Italiano</a></li>
+                    <li class=""><button class="w-5 h-5 border-1 border-solid border-gray-600 mt-1">+</button></li>
+                </ul>
+                <hr class="m-4">
+                <ul class="list-none flex flex-wrap">
+                    <li class="text-14px p-2"><a class="text-737373" href="">Đăng Kí</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Đăng Nhập</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Messager</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Facebook Lite</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Watch</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Danh Bạ</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Trang</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Hạng Mục Trang</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Địa Điểm</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Trò Chơi</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Vị Trí</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">MarketPlace</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Facebook Pay</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Nhóm</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Oculus</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Instagram</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Chiến Dịch Gây Quỹ</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Dịch Vụ</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Giới Thiệu</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Tạo Quảng Cáo</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Nhà Phát Triển</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Tuyển Dụng</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Quyền Riêng Tư</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Cookie</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Lựa Chọn Quảng Cáo</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Điều Khoản</a></li>
+                    <li class="text-14px p-2"><a class="text-737373" href="">Trợ Giúp</a></li>
+                </ul>
+                <br>
+                <b>&nbsp;&nbsp;Facebook @2020</b>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
