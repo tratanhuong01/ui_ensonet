@@ -111,20 +111,14 @@ function searchAccount() {
   document.getElementById("get-account-main").style.display = "none";
   document.getElementById("web").style.opacity = "0.2";
 }
-function loadTextBoxType() {
-  document.getElementById("messages").style.height = 1000;
-  var d = document.getElementById("newExcen");
-  var e = document.getElementById("addOrCancel")
-  if (d.style.display == 'block') {
-    d.style.display = 'none';
-    e.style.transition = '0.5s linear';
-    e.style.transform = "rotate(0deg)";
+function loadTextBoxType(index) {
+  var d = document.getElementsByClassName("newExcen");
+  var e = document.getElementsByClassName("addOrCancel")
+  if (d[index].style.display == 'none') {
+    d[index].style.display = 'block';
   }
   else {
-    var len = document.getElementById("messages").scrollHeight;
-    document.getElementById("messages").scrollTop = len;
-    e.style.transition = '0.5s linear';
-    e.style.transform = "rotate(-45deg)";
+    d[index].style.display = 'none';
   }
 }
 var mess_right = document.getElementsByClassName("mess-right");
@@ -162,4 +156,12 @@ function typeChat(index) {
     three_exten1[index].style.paddingLeft = "0em";
     three_exten[index].style.display = 'block';
   }
+}
+
+function guiVeri(index) {
+  var content_veri = document.getElementsByClassName("content-veri");
+  if (content_veri[index].style.display == 'none')
+    content_veri[index].style.display = 'block';
+  else
+    content_veri[index].style.display = 'none';
 }
