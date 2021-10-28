@@ -7,20 +7,20 @@
     <title>Facebook</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tailwind_second.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tailwind/tailwind.css">
     <style>
         * {
             font-family: 'Lato', sans-serif;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="w-full" id="main">
-        <div class="w-full block z-50 fixed top-0 bg-white" id="header">
+    <div class="w-full dark:bg-dark-main" id="main">
+        <div class="w-full block z-50 fixed top-0 bg-white dark:bg-dark-second" id="header">
             <!--div header -->
             <div class="w-full flex px-2 py-1">
                 <!-- div header left -->
@@ -33,15 +33,13 @@
                     </div>
                     <div class="pr-4 mt-1 w-3/4">
                         <!-- form tìm kiếm -->
-                        <form action="" method="get">
-                            <input class="w-full p-2.5 outline-none rounded-full border-none bg-gray-100" type="text"
-                                name="input" placeholder=" Tìm kiếm trên facebook" />
-                        </form>
+                        <input class="w-full p-2.5 bg-gray-100 outline-none rounded-full border-none dark:bg-dark-third"
+                            type="text" name="input" placeholder=" Tìm kiếm trên facebook" />
                     </div>
                 </div>
                 <div class="w-2/4">
                     <!-- div header center -->
-                    <div class=" m-auto wrapper" style="width: 80%;">
+                    <div class=" m-auto wrapper w-4/5">
                         <ul class="list-icon-header">
                             <li class="active">
                                 <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 aaxa7vy3"
@@ -88,14 +86,15 @@
                 </div>
                 <div class="w-1/4 pl-8 flex">
                     <!-- header right -->
-                    <div class="w-5/12 flex py-0.875 px-2.5 mx-2 mt-1 mb-1.5 p-1.5 hover:bg-gray-200 round-avatar">
+                    <div class="w-5/12 flex py-0.875 px-2.5 mx-2 mt-1 mb-1.5 p-1.5 hover:bg-gray-200 
+                    dark: round-avatar">
                         <div class="w-full">
                             <!-- avatar user  -->
                             <a href=""><img class="w-8 h-8 rounded-full" src="img/avatar.jpg" alt="" /></a>
                         </div>
                         <div class="w-full pt-1">
                             <!-- name user  -->
-                            <a href="" style="font-weight: bold;">Hưởng</a>
+                            <a href="" class="font-bold">Hưởng</a>
                         </div>
                     </div>
                     <div class="w-7/12 pt-2 pb-2">
@@ -112,7 +111,7 @@
                                     <i class="fab fa-facebook-messenger text-xl"></i>
                                     <span class="text-white bg-red-600 font-bold rounded-full text-xs px-1 py-0.5 absolute
                                      -top-2 -right-1">
-                                     99+
+                                        99+
                                     </span>
                                 </div>
                             </li>
@@ -122,7 +121,7 @@
                                     <i class="far fa-bell text-xl"></i>
                                     <span class="text-white bg-red-600 font-bold rounded-full text-xs px-1 py-0.5 absolute
                                      -top-2 -right-1">
-                                     99+
+                                        99+
                                     </span>
                                 </div>
                             </li>
@@ -137,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full flex" id="content">
+        <div class="w-full flex bg-gray-100" id="content">
             <div class="fixed" style="width: 30%;">
                 <div id="wrapper-scrollbar" class="pl-1.5 w-4/6 overflow-x-hidden overflow-y-auto">
                     <div class="w-full left-category">
@@ -165,9 +164,9 @@
                         </ul>
                     </div>
                     <br>
-                    <hr style="width: 70%;">
+                    <hr class="w-3/4">
                     <br>
-                    <h4 style="margin-left: 1em;">Lối tắt của bạn</h4>
+                    <h4 class="ml-4">Lối tắt của bạn</h4>
                     <br>
                     <div class="w-full left-category">
                         <ul>
@@ -194,9 +193,9 @@
                         </ul>
                     </div>
                     <br>
-                    <hr style="width: 70%;">
+                    <hr class="w-3/4">
                     <br>
-                    <h4 style="margin-left: 1em;">Lối tắt của bạn</h4>
+                    <h4 class="ml-4">Lối tắt của bạn</h4>
                     <br>
                     <div class="w-full left-category">
                         <ul>
@@ -224,25 +223,25 @@
                     </div>
                 </div>
             </div>
-            <div class="relative" style="width: 40%;left: 30%;">
+            <div class="w-2/5 relative" style="left: 30%;">
                 <div class="w-full flex mt-4">
-                    <div onclick="window.location.href = 'createStory.html'"  class="w-1/5 p-2 relative text-center cursor-pointer">
+                    <div onclick="window.location.href = 'createStory.html'"
+                        class="w-1/5 p-2 relative text-center cursor-pointer">
                         <div class="w-full">
-                            <img class="w-28 rounded-lg object-cover" style="height: 136px;" src="img/avatar.jpg"
-                                alt="">
+                            <img class="w-28 rounded-lg object-cover h-36" src="img/avatar.jpg" alt="">
                         </div>
-                        <div class="w-full bg-white h-10">
+                        <div class="w-full bg-white h-10 px-2">
                             <div class="w-9 h-9 rounded-full border-4 border-solid 
                             border-white absolute" style="background-color: #3A80DC;bottom: 35px;left: 42px;">
                                 <i class="fas fa-plus pt-1.5 text-white"></i>
                             </div>
-                            <br>
-                            <p class="text-center font-bold ">Tạo Tin</p>
+                            <p class="text-center font-bold pt-2.5 pl-1">Tạo Tin</p>
                         </div>
                     </div>
-                    <div onclick="window.location.href = 'viewstory.html'" class="w-1/5 p-2 relative text-center cursor-pointer">
+                    <div onclick="window.location.href = 'viewstory.html'"
+                        class="w-1/5 p-2 relative text-center cursor-pointer">
                         <div class="w-full">
-                            <img class="w-full object-cover" style="height: 182px;border-radius: 10px;"
+                            <img class=" w-full object-cover" style="height: 182px;border-radius: 10px;"
                                 src="img/avatar.jpg" alt="">
                         </div>
                         <div class="w-full absolute text-left pl-2.5" style="bottom: 15px">
@@ -293,7 +292,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full bg-white m-auto mx-4" style="border-radius: 20px;">
+                <div class="w-full bg-white m-auto mb-2" style="border-radius: 20px;">
                     <div class="w-full flex p-2.5">
                         <div class="w-1/12 mr-3 pt-1">
                             <a href=""><img class="w-full rounded-full h-12" src="img/avatar.jpg"></a>
@@ -947,16 +946,18 @@
                 </div>
             </div>
         </div>
-        <div class="w-11/12 fixed -bottom-2">
+        <div class="w-11/12 fixed -bottom-2 hidden">
             <div class="w-full">
-                <div class="w-1/4 bg-white m-2 p-2 border-2 border-solid border-gray-100 rounded-lg relative float-right">
+                <div
+                    class="w-1/4 bg-white m-2 p-2 border-2 border-solid border-gray-100 rounded-lg relative float-right">
                     <div class="w-full flex py-1 border-b-2 border-solid border-gray-200">
                         <div class="w-2/12">
-                            <img src="img/avatar.jpg" class="cursor-pointer w-10 h-10 p-1 rounded-full object-cover" alt="">
+                            <img src="img/avatar.jpg" class="cursor-pointer w-10 h-10 p-1 rounded-full object-cover"
+                                alt="">
                         </div>
                         <div class="w-2/5">
-                            <p onclick="openSettingChat(0)" class="cursor-pointer text-sm font-bold py-2.5">Trà Hưởng&nbsp;&nbsp;<i
-                                    class="fas fa-angle-down"></i></p>
+                            <p onclick="openSettingChat(0)" class="cursor-pointer text-sm font-bold py-2.5">Trà
+                                Hưởng&nbsp;&nbsp;<i class="fas fa-angle-down"></i></p>
                         </div>
                         <div class="w-1/3">
                             <ul class="flex text-right">
@@ -981,14 +982,14 @@
                                 </li>
                                 <li class="cursor-pointer py-1.5 px-1 hover:bg-gray-200 rounded-full">
                                     <svg height="26px" width="26px" viewBox="-4 -4 24 24">
-                                        <line stroke="#bec2c9" stroke-linecap="round" stroke-width="2" x1="2" x2="14" y1="8"
-                                            y2="8"></line>
+                                        <line stroke="#bec2c9" stroke-linecap="round" stroke-width="2" x1="2" x2="14"
+                                            y1="8" y2="8"></line>
                                     </svg>
                                 </li>
                                 <li class="cursor-pointer py-1.5 px-1 hover:bg-gray-200 rounded-full">
                                     <svg height="26px" width="26px" viewBox="-4 -4 24 24">
-                                        <line stroke="#bec2c9" stroke-linecap="round" stroke-width="2" x1="2" x2="14" y1="2"
-                                            y2="14"></line>
+                                        <line stroke="#bec2c9" stroke-linecap="round" stroke-width="2" x1="2" x2="14"
+                                            y1="2" y2="14"></line>
                                         <line stroke="#bec2c9" stroke-linecap="round" stroke-width="2" x1="2" x2="14"
                                             y1="14" y2="2"></line>
                                     </svg>
@@ -996,7 +997,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="messages" class="w-full p-1 wrapper-scrollbar h-80 overflow-y-auto overflow-x-hidden relative">
+                    <div id="messages"
+                        class="w-full p-1 wrapper-scrollbar h-80 overflow-y-auto overflow-x-hidden relative">
                         <div class="mess-user w-full py-2 flex relative">
                             <div class="w-15per relative">
                                 <a href=""><img class="absolute bottom-1 w-9 h-9 object-cover rounded-full"
@@ -1111,8 +1113,8 @@
                         <div class="w-1/12 flex">
                             <div class="cursor-pointer p-1 fill-65676B pt-2">
                                 <svg class="addOrCancel" onclick="loadTextBoxType(0)"
-                                    class="a8c37x1j ms05siws hr662l2t b7h9ocf4 crt8y2ji tftn3vyl" height="20px" width="20px"
-                                    viewBox="0 0 24 24">
+                                    class="a8c37x1j ms05siws hr662l2t b7h9ocf4 crt8y2ji tftn3vyl" height="20px"
+                                    width="20px" viewBox="0 0 24 24">
                                     <g fill-rule="evenodd">
                                         <polygon fill="none" points="-6,30 30,30 30,-6 -6,-6 "></polygon>
                                         <path
@@ -1170,7 +1172,7 @@
                         <div class="three-exten1 w-6/12">
                             <div class="place-input-type border-none rounded-2xl pl-2 outline-none bg-gray-200 py-1.5 w-11/12"
                                 style="min-height: 20px;" oninput="typeChat(0)" contenteditable placeholder="Aa">
-                            
+
                             </div>
                         </div>
                         <div class="w-1/12 pt-1 zoom">
@@ -1179,38 +1181,48 @@
                             </p>
                         </div>
                     </div>
-                    <div style="right: 101%;display: none;" class="setting-chat w-11/12 absolute top-0 bg-white rounded-lg border-2 rounded-lg">
+                    <div style="right: 101%;display: none;"
+                        class="setting-chat w-11/12 absolute top-0 bg-white rounded-lg border-2 rounded-lg">
                         <ul class="w-full border-b-2 border-gray-200 border-solid p-2">
                             <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
                                     class="fab fa-facebook-messenger pr-1.5"></i> Mở
                                 messager</li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="far fa-user-circle pr-1.5"></i>
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="far fa-user-circle pr-1.5"></i>
                                 Xem trang cá nhân
                             </li>
                         </ul>
                         <ul class="w-full border-b-2 border-gray-200 border-solid p-2">
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="fas fa-palette pr-1.5"></i> Màu
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="fas fa-palette pr-1.5"></i> Màu
                             </li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="far fa-smile pr-1.5"></i> Biểu
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="far fa-smile pr-1.5"></i> Biểu
                                 tượng cảm xúc</li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="fas fa-pen-alt pr-1.5"></i> Biệt
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="fas fa-pen-alt pr-1.5"></i> Biệt
                                 danh</li>
                         </ul>
                         <ul class="w-full border-b-2 border-gray-200 border-solid p-2">
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="fas fa-users pr-1.5"></i> Tạo nhóm
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="fas fa-users pr-1.5"></i> Tạo nhóm
                             </li>
                         </ul>
                         <ul class="w-full border-b-2 border-gray-200 border-solid p-2">
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="far fa-bell pr-1.5"></i> Tắt cuộc
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="far fa-bell pr-1.5"></i> Tắt cuộc
                                 trò chuyện</li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="fab fa-rev pr-1.5"></i> Bỏ qua tin
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="fab fa-rev pr-1.5"></i> Bỏ qua tin
                                 nhắn</li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="fas fa-ban pr-1.5"></i> Chặn</li>
-                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i class="far fa-trash-alt pr-1.5"></i> Xóa
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="fas fa-ban pr-1.5"></i> Chặn</li>
+                            <li class="w-full p-1 text-lg hover:bg-gray-100 cursor-pointer"><i
+                                    class="far fa-trash-alt pr-1.5"></i> Xóa
                                 cuộc trò chuyện
                             </li>
                         </ul>
-                
+
                     </div>
                     <div style="display: none;" class="newExcen w-full py-2 absolute bottom-14 z-10 bg-white">
                         <ul class="w-full flex bg-white">
@@ -1262,964 +1274,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>   
-                  
-            </div>
-        </div>
-        
-    </div>
-    <div id="modal-one" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;">
-        <div class="w-full text-center">
-            <p class="text-2xl font-bold p-2.5">Tạo bài viết</p>
-            <span onclick="closePost()" class=" rounded-full bg-aliceblue px-3 py-1 text-2xl font-bold
-                     absolute right-4 top-2 cursor-pointer">&times;</span>
-            <hr>
-        </div>
-        <div class="w-full flex px-0 py-2">
-            <div class="w-2/12">
-                <a href=""><img class="w-14 h-14 rounded-full object-contain" src="img/avatar.jpg" alt=""></a>
-            </div>
-            <div class="w-10/12">
-                <p class="p-1 pt-0">Trà Hưởng</p>
-                <div class="py-0 px-1 relative" style="width: 28%;border-radius: 30px;background-color: #DBDCE1;">
-                    <ul class="flex text-xs relative cursor-pointer">
-                        <li class="px-0.5 py-1.5"><i class="fas fa-globe-europe"></i></li>
-                        <li class="px-0.5 py-1.5"><b>&nbsp;Công Khai&nbsp;&nbsp;</b></li>
-                        <li class="px-0.5 py-1.5"><i style="position: absolute;top: 5px;" class="fas fa-sort-down"></i>
-                        </li>
-                    </ul>
-
                 </div>
-            </div>
-        </div>
-        <div class="w-full mt-2.5">
-            <textarea id="textarea-post" class="w-full border-none text-xl h-36 px-4 py-2 " name="contentpost" id=""
-                placeholder="Hưởng ơi, Bạn đang nghĩ gì thế?"></textarea>
-        </div>
-        <div class="w-full">
-            <ul class="w-full flex">
-                <li onclick="clickOpenModal(0)" class=" pr-16">
-                    <h3 class="pl-2.5">Thêm vào bài viết</h3>
-                </li>
-                <li class=""><i style="color: #9567EF;font-size: 25px;padding: 2px 4px;" class="fas fa-video"></i>
-                    &nbsp;&nbsp;</li>
-                <li class=""><i style="color: #45B560;font-size: 25px;padding: 2px 4px;" class="far fa-image"></i>
-                    &nbsp;&nbsp;</li>
-                <li onclick="clickOpenModal(1)" class="eOpenModal"><i
-                        style="color: #EAB026;font-size: 25px;padding: 2px 4px;" class="fas fa-smile"></i> &nbsp;&nbsp;
-                </li>
-                <li onclick="clickOpenModal(3)" class="eOpenModal"><i
-                        style="color: #1771E6;font-size: 25px;padding: 2px 4px;" class="fas fa-user-tag"></i>
-                    &nbsp;&nbsp;</li>
-                <li onclick="clickOpenModal(2)" class="eOpenModal"><i
-                        style="color: #E94F3A;padding-right: 9px;font-size: 25px;padding: 2px 4px;"
-                        class="fas fa-map-marker-alt"></i></li>
-                <li onclick="clickOpenModal(4)" class="eOpenModal"><i
-                        style="color: #28B19E;font-size: 25px;padding: 2px 4px;" class="fas fa-radiation"></i>
-                </li>
-            </ul>
-        </div>
-        <div class="w-full text-center my-2.5 mx-0">
-            <button class="w-full p-2.5 border-none text-white cursor-pointer" type="submit"
-                style="background-color: #1771E6;border-radius: 20px;"><b>Đăng</b></button>
-        </div>
-    </div>
-    <div id="modal-two" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2 bg-white z-20" id="modal-create-post"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;">
-        <p class="p-2.5 block text-center text-xl font-bold">Thêm vào bài viết</p>
-        <span onclick="clickCloseModal(0)" class=" p-2 rounded-full cursor-pointer absolute top-1.5">
-            <img src="img/left.png" alt="" srcset=""></span>
-        <div class="w-full flex">
-
-            <div class="w-full mr-4 add-into-post">
-                <ul class="w-full">
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #45B560;font-size: 24px;"
-                            class="far fa-image"></i>
-                        &nbsp;&nbsp; <b>Ảnh / Video</b>
-                    </li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #EAB026;font-size: 24px;"
-                            class="fas fa-smile"></i>
-                        &nbsp;&nbsp; <b>Cảm xúc / Hoạt
-                            động</b></li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #E42645;font-size: 24px;"
-                            class="fas fa-video"></i>
-                        &nbsp;&nbsp; <b>Video trực
-                            tiếp</b>
-                    </li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #856CC1;font-size: 24px;"
-                            class="fas fa-eye"></i>
-                        &nbsp;&nbsp; <b>Xem chung</b>
-                    </li>
-                </ul>
-            </div>
-            <div class="w-full mr-4 add-into-post">
-                <ul class="w-full">
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #9567EF;font-size: 24px;"
-                            class="fas fa-video"></i>
-                        &nbsp;&nbsp; <b>Tạo phòng hộp
-                            mặt</b></li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #1771E6;font-size: 24px;"
-                            class="fas fa-user-tag"></i>
-                        &nbsp;&nbsp; <b>Gắn thẻ bạn
-                            bè</b></li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #E94F3A;padding-right: 9px;font-size: 24px;"
-                            class="fas fa-map-marker-alt"></i>
-                        &nbsp;&nbsp; <b>Check in</b></li>
-                    <li class="py-3 p-2 cursor-pointer"><i style="color: #28B19E;padding-right: 6px;font-size: 24px;"
-                            class="fas fa-radiation"></i>
-                        &nbsp;&nbsp;
-                        <b>GIF</b>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div id="modal-three" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2 bg-white z-20" id="modal-create-post"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;" id="modal-tac">
-        <p class="p-2.5 block text-center text-xl font-bold">Bạn đang cảm thấy thế nào ?</p>
-        <span onclick="clickCloseModal(1)" class=" p-2 rounded-full cursor-pointer absolute top-1.5">
-            <img src="img/left.png" alt="" srcset=""></span>
-        <hr>
-        <div class="w-full my-2 px-2">
-            <input class="w-full p-2 pl-4 bg-gray-200" style="border-radius: 30px;" type="text"
-                placeholder="Bạn đang ở đâu ?">
-        </div>
-        <div class="tac-user wrapper-content-right">
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-            <div class="tac-user-clone">
-                <div class="tac-user-1">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yt/r/FV89MgMcSAE.png" alt="">
-                </div>
-                <div class="tac-user-2">
-                    <p>hạnh phúc</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="modal-four" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2 bg-white z-20" id="modal-create-post"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;" id="modal-local">
-        <p class="p-2.5 block text-center text-xl font-bold">Tìm kiếm vị trí</p>
-        <span onclick="clickCloseModal(2)" class=" p-2 rounded-full cursor-pointer absolute top-1.5">
-            <img src="img/left.png" alt="" srcset=""></span>
-        <hr>
-        <div class="w-full my-2 px-2">
-            <input class="w-full p-2 pl-4 bg-gray-200" style="border-radius: 30px;" type="text"
-                placeholder="Bạn đang ở đâu ?">
-        </div>
-        <div class="tac-user wrapper-content-right">
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="tac-user-1" style="text-align: center;">
-                    <i style="color: #E94F3A;padding-right: 10px;padding-top: 10px;font-size: 23px;"
-                        class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Quang Nam - Da Nang - Viet Nam</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="modal-five" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2 bg-white z-20" id="modal-create-post"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;" id="modal-local">
-        <p class="p-2.5 block text-center text-xl font-bold">Gắn thẻ bạn bè</p>
-        <span onclick="clickCloseModal(3)" class=" p-2 rounded-full cursor-pointer absolute top-1.5">
-            <img src="img/left.png" alt="" srcset=""></span>
-        <hr>
-        <div class="w-full my-2 px-2">
-            <input class="w-full p-2 pl-4 bg-gray-200" style="border-radius: 30px;" type="text"
-                placeholder="Tìm kiếm bạn bè">
-        </div>
-        <div class="tac-user wrapper-content-right">
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-            <div class="w-full flex py-2 px-4 cursor-pointer local-add">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-12 h-12 rounded-full object-contain" src="img/avatar.jpg" alt="">
-                </div>
-                <div class="tac-user-2" style="padding-top: 1%;padding-left: 2%;">
-                    <p>Trà Hưởng</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="modal-six" class="border-2 border-solid border-gray-300 p-4 pt-0
-            bg-white w-1/3 fixed z-50 top-1/2 left-1/2 bg-white z-20" id="modal-create-post"
-        style="border-radius: 20px;transform: translate(-50%,-50%);display: none;" id="modal-local">
-        <p class="p-2.5 block text-center text-xl font-bold">Chọn file GIF</p>
-        <span onclick="clickCloseModal(4)" class=" p-2 rounded-full cursor-pointer absolute top-1.5">
-            <img src="img/left.png" alt="" srcset=""></span>
-        <hr>
-        <div class="w-full my-2 px-2">
-            <input class="w-full p-2 pl-4 bg-gray-200" style="border-radius: 30px;" type="text" placeholder="Tìm kiếm ">
-        </div>
-        <div class="tac-user wrapper-content-right">
-            <div class="w-full py-2 px-4 cursor-pointer">
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-96 h-96 object-contain px-4" src="gif/tenor.gif" alt="">
-                </div>
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-96 h-96 object-contain" src="gif/tenor (1).gif" alt="">
-                </div>
-                <div class="" style="text-align: center;padding-right: 10px">
-                    <img class="w-96 h-96 object-contain" src="gif/giphy.gif" alt="">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <div id="connectfriend" style="display: none;width: 26%;top: 64px;right: 0;"
-        class="p-4 fixed z-10 bg-white right-0">
-        <div class="wrapper-content-right w-full overflow-x-hidden overflow-y-auto " style="max-height: 630px;">
-            <div class="w-full ">
-                <span class="float-left">
-                    <b>Lời mời kết bạn</b>
-                </span>
-                <span class="float-right pr-4">
-                    <a href=""><b>Xem tất cả</b></a>
-                </span>
-            </div>
-
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full flex py-2.5 px-0">
-                <div class="w-1/5">
-                    <a href=""><img class="w-16 h-16 object-cover" src="img/gai1.jpg" alt=""></a>
-                </div>
-                <div class="w-4/5 pl-2 pr-4">
-                    <div class="w-full">
-                        <span class="float-left pl-2.5 font-bold">
-                            <a href="">Mỹ Hạnh</a></span>
-                        <span class="float-right text-xs">Vừa xong</span>
-                    </div>
-                    <div class="w-full flex py-2.5 px-0 text-sm font-bold">
-                        <span class="w-7/12 text-center h-10 leading-10 mr-4 cursor-pointer"
-                            style="border-radius: 10px;background-color: #1877F2;">
-                            <a class="text-white" href="">Xác Nhận</a>
-                        </span>
-                        <span class="w-7/12 text-center h-10 leading-10 cursor-pointer"
-                            style="background-color: #D8DADF;border-radius: 10px;">
-                            <a class="color-black" href="">Xóa</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-2.5 mx-auto w-11/12">
-            <br>
-        </div>
-    </div>
-    <div id="messenger-facebook" class="p-4 fixed z-10 bg-white right-0"
-        style="display: none;width: 26%;width: 26%;top: 64px;right: 0;">
-        <div class="wrapper-content-right w-full overflow-x-hidden overflow-y-auto " style="max-height: 630px;">
-            <div class="w-full flex">
-                <span>
-                    <b>Messenger</b>
-                </span>
-                <span style="padding-left: 7em;">
-                    <a href=""><b>Vào Messenger</b></a>
-                </span>
-                <span onclick="closeMessenger()" class="rounded-full bg-gray-300 py-1 px-3 text-lg font-bold
-                      relative top-0 left-2.5">×</span>
 
             </div>
-            <div class="w-full">
-                <div class="w-full p-1">
-                    <input type="text" name="" style="border-radius: 30px;" class="w-full py-1.5 px-4 my-2 bg-gray-200"
-                        placeholder="Tìm kiếm trên messenger">
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="mess-person cursor-pointer flex relative focus:bg-white hover:bg-gray-200 py-2 px-1">
-                    <div class="w-1/5">
-                        <a href=""><img src="img/avatar.jpg" alt=""
-                                class="w-14 h-14 rounded-full object-cover p-0.5"></a>
-                    </div>
-                    <div class="w-4/5">
-                        <div class="w-full">
-                            <span style="float: left;font-weight: bold;">
-                                <a href="">Trà Hưởng</a></span>
-                        </div>
-                        <div class="w-full flex py-1 text-base flex">
-                            <div class="w-4/5">
-                                <span class="text-gray-500">You : Lên tập hơi kk. &nbsp;&nbsp;16 giờ</span>
-                            </div>
-                            <div class="w-1/5">
-                                <img class="float-right w-5 h-5 rounded-full" src="img/avatar.jpg" alt="">
-                            </div>
-                        </div>
-                        <span class="mess-edit top-4 right-4 text-center absolute rounded-full bg-white">
-                            <i class="fas fa-ellipsis-h edit-mess"></i>
-                        </span>
-                    </div>
-
-                </div>
-                <hr class="my-2.5 mx-auto w-11/12">
-                <br>
-                <div class="w-full text-center">
-                    <a href=""><b style="color: blue;">Xem tất cả trong messenger</b></a>
-                </div>
-            </div>
-
         </div>
 
     </div>
